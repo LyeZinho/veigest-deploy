@@ -1,0 +1,1620 @@
+2025-11-22 22:35:16 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema()
+#10 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata()
+#11 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema()
+#12 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory()
+#13 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#15 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#16 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#17 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#18 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#19 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#20 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#21 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#22 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal()
+#5 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema()
+#10 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory()
+#11 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#13 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#14 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#15 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#16 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#17 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#18 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#19 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#20 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2025-11-22 22:35:16 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'TERM_PROGRAM_VERSION' => '1.106.2'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '100.111.122.83 52386 100.109.180.124 22'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-281735336e.sock'
+    'SHLVL' => '2'
+    'XDG_SESSION_ID' => '988'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '100.111.122.83 52386 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/bin/remote-cli:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-b33e033f-a123-44a5-a89e-28dc910c8654.sock'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1763850916.366
+    'REQUEST_TIME' => 1763850916
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--interactive=0'
+    ]
+    'argc' => 3
+]
+2025-12-01 12:46:31 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "migration". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php:564
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#3 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migration". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2025-12-01 12:46:31 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.106.3'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 53841 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-ae3860edbf.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '13'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 53841 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/cli/servers/Stable-bf9252a2fb45be6893dd8870c0bf37e2e1766d61/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-5236cb59-3cd8-4da2-9035-b747becd0477.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1764593191.3476
+    'REQUEST_TIME' => 1764593191
+    'argv' => [
+        0 => 'yii'
+        1 => 'migration'
+        2 => 'down'
+    ]
+    'argc' => 3
+]
+2025-12-04 19:28:17 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "migrations". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php:564
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#3 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrations". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2025-12-04 19:28:17 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.106.2'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '100.111.122.83 60120 100.109.180.124 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-281735336e.sock'
+    'SHLVL' => '2'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '597'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '100.111.122.83 60120 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-fcf874e9-45e9-4af7-8609-71369e14f67b.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1764876497.6411
+    'REQUEST_TIME' => 1764876497
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrations'
+        2 => 'down'
+    ]
+    'argc' => 3
+]
+2025-12-04 21:20:24 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: user/list in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php:155
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#5 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "user/list". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2025-12-04 21:20:24 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.106.2'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '100.111.122.83 60120 100.109.180.124 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-281735336e.sock'
+    'SHLVL' => '2'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '597'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '100.111.122.83 60120 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/cli/servers/Stable-1e3c50d64110be466c0b4a45222e81d2c9352888/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-eddf2bab-c999-4c8a-9ac1-6dfa165dff6b.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/api-tests'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1764883224.9677
+    'REQUEST_TIME' => 1764883224
+    'argv' => [
+        0 => 'yii'
+        1 => 'user/list'
+    ]
+    'argc' => 2
+]
+2025-12-17 17:49:45 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] Connection refused in /app/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct('mysql:host=127....', 'veigest_admin', Object(SensitiveParameterValue), NULL)
+#1 /app/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /app/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /app/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /app/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 /app/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#6 /app/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /app/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#8 /app/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /app/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /app/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /app/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array(Array, Array)
+#16 /app/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#17 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#18 /app/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction('', Array)
+#19 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /app/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /app/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /app/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /app/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /app/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 /app/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare(true)
+#4 /app/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /app/vendor/yiisoft/yii2/db/mysql/Schema.php(366): yii\db\Command->queryAll()
+#6 /app/vendor/yiisoft/yii2/db/mysql/Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /app/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /app/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /app/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array(Array, Array)
+#14 /app/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#15 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('', Array)
+#16 /app/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction('', Array)
+#17 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /app/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /app/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+2025-12-17 17:49:45 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'HOSTNAME' => 'f32f2125c600'
+    'TERM' => 'linux'
+    'DB_HOST' => 'db'
+    'DB_PORT' => '3306'
+    'DB_NAME' => 'veigest_db'
+    'DB_USER' => 'veigest_user'
+    'DB_PASSWORD' => 'secret'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'APACHE_CONFDIR' => '/etc/apache2'
+    'APACHE_ENVVARS' => '/etc/apache2/envvars'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_VERSION' => '8.2.29'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.29.tar.xz'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.29.tar.xz.asc'
+    'PHP_SHA256' => '475f991afd2d5b901fb410be407d929bc00c46285d3f439a02c59e8b6fe3589c'
+    'PHP_USER_ID' => '33'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'HOME' => '/root'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1765993785.5563
+    'REQUEST_TIME' => 1765993785
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => '--interactive=0'
+    ]
+    'argc' => 3
+]
+2025-12-17 19:59:19 [-][-][-][error][yii\db\Exception] PDOException: could not find driver in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php:722
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(722): PDO->__construct()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/sqlite/Command.php(54): yii\db\Command->queryInternal()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(417): yii\db\sqlite\Command->queryInternal()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/sqlite/Schema.php(230): yii\db\Command->queryAll()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/sqlite/Schema.php(100): yii\db\sqlite\Schema->findColumns()
+#10 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\sqlite\Schema->loadTableSchema()
+#11 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata()
+#12 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema()
+#13 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory()
+#14 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#15 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#16 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#17 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#18 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#19 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#20 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#21 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#22 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#23 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#24 {main}
+
+Next yii\db\Exception: could not find driver in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php:648
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1067): yii\db\Connection->open()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(1181): yii\db\Command->prepare()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/sqlite/Command.php(54): yii\db\Command->queryInternal()
+#5 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Command.php(417): yii\db\sqlite\Command->queryInternal()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/sqlite/Schema.php(230): yii\db\Command->queryAll()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/sqlite/Schema.php(100): yii\db\sqlite\Schema->findColumns()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(756): yii\db\sqlite\Schema->loadTableSchema()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/Schema.php(192): yii\db\Schema->getTableMetadata()
+#10 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema()
+#11 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory()
+#12 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#14 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#15 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#16 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#17 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#18 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#19 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#20 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#21 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#22 {main}
+Additional Information:
+
+2025-12-17 19:59:19 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.102.0'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '194.210.216.233 10406 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-ae3860edbf.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '302'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '194.210.216.233 10406 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-042d7c89-18b8-498b-99fa-69e400761779.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest/backend/modules/api-tests'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1766001559.9166
+    'REQUEST_TIME' => 1766001559
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+        2 => '--interactive=0'
+    ]
+    'argc' => 3
+]
+2025-12-18 20:28:03 [-][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::nome in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get()
+#1 /home/pedro/facul/website-VeiGest/veigest/console/controllers/PasswordController.php(20): yii\db\BaseActiveRecord->__get()
+#2 [internal function]: console\controllers\PasswordController->actionReset()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#5 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#10 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#11 {main}
+2025-12-18 20:28:03 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.102.0'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '194.210.216.235 10400 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-ae3860edbf.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '535'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '194.210.216.235 10400 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-977d9aa8-728e-4723-bca4-28f264f953e9.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1766089683.848
+    'REQUEST_TIME' => 1766089683
+    'argv' => [
+        0 => 'yii'
+        1 => 'password/reset'
+        2 => 'admin'
+        3 => 'admin'
+    ]
+    'argc' => 4
+]
+2025-12-18 20:33:20 [-][-][-][error][Error] Error: Class "common\models\User" not found in /home/pedro/facul/website-VeiGest/veigest/test_password.php:24
+Stack trace:
+#0 {main}
+2025-12-18 20:33:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.102.0'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '194.210.216.235 10400 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-ae3860edbf.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '535'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '194.210.216.235 10400 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-977d9aa8-728e-4723-bca4-28f264f953e9.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'test_password.php'
+    'SCRIPT_NAME' => 'test_password.php'
+    'SCRIPT_FILENAME' => 'test_password.php'
+    'PATH_TRANSLATED' => 'test_password.php'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1766090000.2033
+    'REQUEST_TIME' => 1766090000
+    'argv' => [
+        0 => 'test_password.php'
+    ]
+    'argc' => 1
+]
+2025-12-23 15:54:20 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: migrate/status in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php:155
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#5 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrate/status". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2025-12-23 15:54:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 54105 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '8'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 54105 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-d2d95f6c-696c-4e16-aaaf-1b7cba6bfa70.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1766505260.7337
+    'REQUEST_TIME' => 1766505260
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/status'
+    ]
+    'argc' => 2
+]
+2025-12-23 15:54:29 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: migrate/status in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php:155
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#5 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrate/status". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2025-12-23 15:54:29 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 54105 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '8'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 54105 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-d2d95f6c-696c-4e16-aaaf-1b7cba6bfa70.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1766505269.4766
+    'REQUEST_TIME' => 1766505269
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/status'
+    ]
+    'argc' => 2
+]
+2025-12-23 15:54:47 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unable to find the version '251121000000'. in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:465
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionMark()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#5 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#8 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#9 {main}
+2025-12-23 15:54:47 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 54105 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '8'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 54105 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-d2d95f6c-696c-4e16-aaaf-1b7cba6bfa70.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1766505287.0376
+    'REQUEST_TIME' => 1766505287
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+        2 => '251121000000'
+    ]
+    'argc' => 3
+]
+2026-01-04 20:56:29 [-][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: fwrite(): Write of 7 bytes failed with errno=32 Broken pipe in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/helpers/BaseConsole.php:801
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/helpers/BaseConsole.php(801): fwrite()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(316): yii\helpers\BaseConsole::stdout()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/HelpController.php(319): yii\console\Controller->stdout()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#5 [internal function]: yii\console\controllers\HelpController->actionIndex()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#10 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#11 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#12 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#13 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#14 {main}
+2026-01-04 20:56:29 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-92c3deec-aaa4-4fe0-9d44-49259e1c56c4.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767560189.5912
+    'REQUEST_TIME' => 1767560189
+    'argv' => [
+        0 => 'yii'
+        1 => 'help'
+    ]
+    'argc' => 2
+]
+2026-01-04 20:57:49 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "test/driver-query". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php:564
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#3 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "test/driver-query". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2026-01-04 20:57:49 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-92c3deec-aaa4-4fe0-9d44-49259e1c56c4.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767560269.3974
+    'REQUEST_TIME' => 1767560269
+    'argv' => [
+        0 => 'yii'
+        1 => 'test/driver-query'
+    ]
+    'argc' => 2
+]
+2026-01-04 21:43:50 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unknown option: --all. Options available: --color, --interactive, --help, --silentExitOnException, --migrationPath, --migrationNamespaces, --compact, --migrationTable, --db in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php:171
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#4 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#5 {main}
+2026-01-04 21:43:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-92c3deec-aaa4-4fe0-9d44-49259e1c56c4.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767563030.324
+    'REQUEST_TIME' => 1767563030
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/down'
+        2 => '--all'
+    ]
+    'argc' => 3
+]
+2026-01-04 21:43:53 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unknown option: --all. Options available: --color, --interactive, --help, --silentExitOnException, --migrationPath, --migrationNamespaces, --compact, --migrationTable, --db in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php:171
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#4 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#5 {main}
+2026-01-04 21:43:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-92c3deec-aaa4-4fe0-9d44-49259e1c56c4.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767563033.086
+    'REQUEST_TIME' => 1767563033
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/down'
+        2 => '--all'
+    ]
+    'argc' => 3
+]
+2026-01-04 21:44:03 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unknown option: --all. Options available: --color, --interactive, --help, --silentExitOnException, --migrationPath, --migrationNamespaces, --compact, --migrationTable, --db in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php:171
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#4 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#5 {main}
+2026-01-04 21:44:03 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-92c3deec-aaa4-4fe0-9d44-49259e1c56c4.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767563043.8198
+    'REQUEST_TIME' => 1767563043
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/down'
+        2 => '--all'
+    ]
+    'argc' => 3
+]
+2026-01-05 21:41:04 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: user/list in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php:155
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#5 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "user/list". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2026-01-05 21:41:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-549d6bbb-7beb-4863-a283-c06386045cc9.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767649264.7893
+    'REQUEST_TIME' => 1767649264
+    'argv' => [
+        0 => 'yii'
+        1 => 'user/list'
+    ]
+    'argc' => 2
+]
+2026-01-05 23:34:27 [-][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: fwrite(): Write of 13 bytes failed with errno=32 Broken pipe in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/helpers/BaseConsole.php:801
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/helpers/BaseConsole.php(801): fwrite()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(316): yii\helpers\BaseConsole::stdout()
+#3 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/HelpController.php(333): yii\console\Controller->stdout()
+#4 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#5 [internal function]: yii\console\controllers\HelpController->actionIndex()
+#6 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/InlineAction.php(60): call_user_func_array()
+#7 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Controller.php(184): yii\base\InlineAction->runWithParams()
+#8 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#9 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php(555): yii\console\Controller->runAction()
+#10 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#11 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#12 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#13 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#14 {main}
+2026-01-05 23:34:27 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-8dd14737-f64a-4506-94a8-1c07623a12c0.sock'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767656067.0619
+    'REQUEST_TIME' => 1767656067
+    'argv' => [
+        0 => 'yii'
+        1 => 'help'
+    ]
+    'argc' => 2
+]
+2026-01-06 00:36:11 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "db/query". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php:564
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#3 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "db/query". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2026-01-06 00:36:11 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 24313 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'GIT_PAGER' => 'cat'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '340'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 24313 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-a57dc9db-c974-4f09-82f7-711156d62e63.sock'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767659771.6421
+    'REQUEST_TIME' => 1767659771
+    'argv' => [
+        0 => 'yii'
+        1 => 'db/query'
+        2 => 'DESCRIBE users'
+    ]
+    'argc' => 3
+]
+2026-01-06 19:59:56 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "init". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Module.php:564
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#3 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "init". in /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /home/pedro/facul/website-VeiGest/veigest/vendor/yiisoft/yii2/base/Application.php(387): yii\console\Application->handleRequest()
+#2 /home/pedro/facul/website-VeiGest/veigest/yii(23): yii\base\Application->run()
+#3 {main}
+2026-01-06 19:59:56 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'COLORTERM' => 'truecolor'
+    'NVM_INC' => '/home/pedro/.nvm/versions/node/v20.19.5/include/node'
+    'TERM_PROGRAM_VERSION' => '1.107.1'
+    'PWD' => '/home/pedro/facul/website-VeiGest/veigest'
+    'LOGNAME' => 'pedro'
+    'XDG_SESSION_TYPE' => 'tty'
+    'VSCODE_GIT_ASKPASS_NODE' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'
+    'HOME' => '/home/pedro'
+    'LANG' => 'pt_PT.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:'
+    'SSL_CERT_DIR' => '/usr/lib/ssl/certs'
+    'GIT_ASKPASS' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'
+    'SSH_CONNECTION' => '192.168.1.105 4784 192.168.1.100 22'
+    'NVM_DIR' => '/home/pedro/.nvm'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => ''
+    'VSCODE_PYTHON_AUTOACTIVATE_GUARD' => '1'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'pedro'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-4e351d9aed.sock'
+    'SHLVL' => '1'
+    'NVM_CD_FLAGS' => ''
+    'XDG_SESSION_ID' => '776'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'SSL_CERT_FILE' => '/usr/lib/ssl/cert.pem'
+    'SSH_CLIENT' => '192.168.1.105 4784 22'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'BROWSER' => '/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'
+    'PATH' => '/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/pedro/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/pedro/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/home/pedro/.nvm/versions/node/v20.19.5/bin:/home/pedro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'NVM_BIN' => '/home/pedro/.nvm/versions/node/v20.19.5/bin'
+    'TERM_PROGRAM' => 'vscode'
+    'VSCODE_IPC_HOOK_CLI' => '/run/user/1000/vscode-ipc-175dd065-39df-45c3-bf63-c35d891a2c06.sock'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/pedro/facul/website-VeiGest'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1767729596.0975
+    'REQUEST_TIME' => 1767729596
+    'argv' => [
+        0 => 'yii'
+        1 => 'init'
+    ]
+    'argc' => 2
+]
