@@ -1,0 +1,14 @@
+# Codeception Test Suite Configuration
+#
+# Suite for unit tests with database integration
+# RF-TT-001: Testes unitários para models
+
+suite_namespace: frontend\tests\unit
+actor: UnitTester
+bootstrap: false
+modules:
+    enabled:
+        - Yii2:
+            part: [orm, fixtures]
+            configFile: 'config/test.php'
+        - Asserts

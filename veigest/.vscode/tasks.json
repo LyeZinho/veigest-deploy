@@ -1,0 +1,184 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "codeception-run",
+			"type": "shell",
+			"command": "cd c:/wamp64/www/website-VeiGest/veigest; vendor/bin/codecept.bat run",
+			"problemMatcher": []
+		},
+		{
+			"label": "codeception-run-log",
+			"type": "shell",
+			"command": "cd c:/wamp64/www/website-VeiGest/veigest; vendor/bin/codecept.bat run > codecept-run.log",
+			"problemMatcher": []
+		},
+		{
+			"label": "codeception-run-log-nocolor",
+			"type": "shell",
+			"command": "cd c:/wamp64/www/website-VeiGest/veigest; vendor/bin/codecept.bat run --no-colors > codecept-run.log",
+			"problemMatcher": []
+		},
+		{
+			"label": "codeception-run",
+			"type": "shell",
+			"command": "vendor/bin/codecept.bat",
+			"args": [
+				"run"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Codeception (common)",
+			"type": "shell",
+			"command": "vendor\\bin\\codecept.bat",
+			"args": [
+				"run",
+				"common"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Codeception Tests",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv",
+				"--debug"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Re-run Codeception Tests",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv",
+				"--debug",
+				"--fail-fast"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Re-run Tests (fast)",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"frontend",
+				"-vv",
+				"--debug",
+				"--fail-fast"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run All Tests",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Re-run All Tests",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv",
+				"--fail-fast"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run All Tests (final)",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Tests with New Fixtures",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Run Tests (Skip VerifyEmail)",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"--skip",
+				"VerifyEmailCest",
+				"-vv"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Run All Tests Final",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"-vv"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Run Tests (using main DB)",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"vendor/bin/codecept",
+				"run",
+				"--verbose"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}

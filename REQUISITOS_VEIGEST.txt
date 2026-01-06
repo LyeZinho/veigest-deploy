@@ -1,0 +1,693 @@
+================================================================================
+              VEIGEST - SISTEMA DE GESTÃO DE FROTAS
+              DOCUMENTO DE REQUISITOS FUNCIONAIS E NÃO FUNCIONAIS
+================================================================================
+
+Data: 06 de Janeiro de 2026
+Projeto: VeiGest - Sistema de Gestão de Frotas Empresariais
+Versão: 1.0
+
+================================================================================
+ÍNDICE
+================================================================================
+1. REQUISITOS FUNCIONAIS - FRONT-OFFICE
+2. REQUISITOS FUNCIONAIS - BACK-OFFICE
+3. REQUISITOS NÃO FUNCIONAIS
+4. CONTROLO DE ACESSO (RBAC)
+   4.1 Roles do Sistema
+   4.2 Permissões por Módulo
+   4.3 Matriz de Permissões por Role
+
+================================================================================
+1. REQUISITOS FUNCIONAIS - FRONT-OFFICE
+================================================================================
+
+RF-FO-001: Autenticação de Utilizadores
+────────────────────────────────────────────────────────────────────────────
+Descrição: Sistema de login para condutores e funcionários
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-FO-001.1: Login com nome de utilizador e palavra-passe ✓
+  • RF-FO-001.2: Recuperação de palavra-passe via email X
+  • RF-FO-001.3: Validação de credenciais com feedback de erros ✓
+  • RF-FO-001.4: Sessão segura com timeout automático ✓
+  • RF-FO-001.5: Logout manual do sistema ✓
+
+Critérios de Aceitação:
+  • Interface de login responsiva
+  • Validação de campos obrigatórios
+  • Mensagens de erro claras
+  • Redirecionamento pós-autenticação
+
+
+RF-FO-002: Dashboard do Condutor
+────────────────────────────────────────────────────────────────────────────
+Descrição: Painel principal com informações relevantes para o condutor
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-FO-002.1: Visualização de veículos atribuídos ✓
+  • RF-FO-002.2: Estado atual dos veículos ✓
+  • RF-FO-002.4: Alertas e notificações importantes ✓
+
+
+RF-FO-003: Gestão de Perfil Pessoal
+────────────────────────────────────────────────────────────────────────────
+Descrição: Atualização de dados pessoais do utilizador
+Prioridade: Média
+Complexidade: Baixa
+Estado: Implementado
+
+Especificações:
+  • RF-FO-003.1: Visualização de dados pessoais ✓
+  • RF-FO-003.2: Edição de informações de contacto ✓
+  • RF-FO-003.3: Alteração de palavra-passe ✓
+  • RF-FO-003.4: Upload de foto de perfil ✓
+  • RF-FO-003.5: Histórico de alterações ✓
+
+
+RF-FO-004: Consulta de Veículos
+────────────────────────────────────────────────────────────────────────────
+Descrição: Visualização de informações dos veículos atribuídos
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-FO-004.1: Lista de veículos atribuídos ao utilizador ✓
+  • RF-FO-004.2: Detalhes técnicos do veículo ✓
+  • RF-FO-004.3: Estado atual do veículo ✓
+  • RF-FO-004.4: Histórico de utilizações ✓
+  • RF-FO-004.5: Documentação associada ✓
+
+RF-FO-007: Notificações e Alertas
+────────────────────────────────────────────────────────────────────────────
+Descrição: Sistema de notificações em tempo real
+Prioridade: Média
+Complexidade: Alta
+Estado: Implementado
+
+Especificações:
+  • RF-FO-007.1: Notificações de manutenções pendentes ✓
+  • RF-FO-007.2: Alertas de vencimento de documentos ✓
+  • RF-FO-007.3: Mensagens da administração ✓
+
+
+RF-FO-008: Sistema de Suporte (Tickets)
+────────────────────────────────────────────────────────────────────────────
+Descrição: Criação e acompanhamento de tickets de suporte
+Prioridade: Média
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-FO-008.1: Criação de tickets de suporte ✓
+  • RF-FO-008.2: Categorização (técnico, funcionalidade, outro) ✓
+  • RF-FO-008.3: Definição de prioridade ✓
+  • RF-FO-008.4: Visualização de tickets criados ✓
+  • RF-FO-008.5: Acompanhamento de estado ✓
+
+
+RF-FO-009: Gestão de Rotas
+────────────────────────────────────────────────────────────────────────────
+Descrição: Visualização de rotas atribuídas
+Prioridade: Baixa
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-FO-009.1: Visualização de rotas atribuídas ✓
+  • RF-FO-009.2: Detalhes de origem e destino ✓
+  • RF-FO-009.3: Horários de início e fim ✓
+  • RF-FO-009.4: Histórico de rotas completadas ✓
+
+
+================================================================================
+2. REQUISITOS FUNCIONAIS - BACK-OFFICE
+================================================================================
+
+RF-BO-001: Autenticação Administrativa
+────────────────────────────────────────────────────────────────────────────
+Descrição: Sistema de login para administradores e gestores
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-001.1: Login com credenciais administrativas ✓
+  • RF-BO-001.2: Controlo de acesso por funções (RBAC) ✓
+  • RF-BO-001.4: Registo de tentativas de login ✓
+  • RF-BO-001.5: Políticas de palavra-passe robustas ✓
+
+
+RF-BO-002: Dashboard Administrativo
+────────────────────────────────────────────────────────────────────────────
+Descrição: Painel principal com métricas e indicadores
+Prioridade: Alta
+Complexidade: Alta
+Estado: Implementado
+
+Especificações:
+  • RF-BO-002.1: Resumo estatístico da frota ✓
+  • RF-BO-002.2: KPIs (custos, consumo, manutenções) ✓
+  • RF-BO-002.3: Gráficos de consumo e custos ✓
+  • RF-BO-002.4: Alertas críticos ✓
+  • RF-BO-002.5: Atualizações em tempo real ✓
+
+
+RF-BO-003: Gestão de Empresas
+────────────────────────────────────────────────────────────────────────────
+Descrição: CRUD completo para entidades empresariais
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-003.1: Criação de empresas ✓
+  • RF-BO-003.2: Edição de dados empresariais ✓
+  • RF-BO-003.3: Ativação/desativação de empresas ✓
+  • RF-BO-003.4: Associação de utilizadores ✓
+  • RF-BO-003.5: Relatórios por empresa ✓
+
+Critérios de Aceitação:
+  • Validação de NIF/NIPC únicos
+  • Campos obrigatórios validados
+  • Interface intuitiva
+  • Confirmação para operações críticas
+
+
+RF-BO-004: Gestão de Utilizadores
+────────────────────────────────────────────────────────────────────────────
+Descrição: Administração completa de contas de utilizador
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-004.1: Criação de utilizadores ✓
+  • RF-BO-004.2: Edição de perfis ✓
+  • RF-BO-004.3: Ativação/desativação ✓
+  • RF-BO-004.4: Atribuição de funções (roles) ✓
+  • RF-BO-004.5: Reset de palavra-passe ✓
+  • RF-BO-004.6: Auditoria de ações ✓
+
+
+RF-BO-005: Gestão de Veículos
+────────────────────────────────────────────────────────────────────────────
+Descrição: CRUD completo para a frota
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-005.1: Registo de veículos ✓
+  • RF-BO-005.2: Edição de dados técnicos ✓
+  • RF-BO-005.3: Gestão de estado (ativo, manutenção, inativo) ✓
+  • RF-BO-005.4: Upload de documentação ✓
+  • RF-BO-005.5: Atribuição a condutores ✓
+  • RF-BO-005.6: Histórico completo ✓
+
+
+RF-BO-006: Gestão de Manutenções
+────────────────────────────────────────────────────────────────────────────
+Descrição: Planeamento e controlo de manutenções
+Prioridade: Alta
+Complexidade: Alta
+Estado: Implementado
+
+Especificações:
+  • RF-BO-006.1: Agendamento de manutenção preventiva ✓
+  • RF-BO-006.2: Registo de manutenção corretiva ✓
+  • RF-BO-006.3: Controlo de custos ✓
+  • RF-BO-006.4: Gestão de fornecedores/oficinas ✓
+  • RF-BO-006.5: Alertas automáticos ✓
+  • RF-BO-006.6: Relatórios de manutenções ✓
+
+
+RF-BO-007: Relatórios e Analytics
+────────────────────────────────────────────────────────────────────────────
+Descrição: Sistema abrangente de relatórios operacionais
+Prioridade: Alta
+Complexidade: Alta
+Estado: Implementado
+
+Especificações:
+  • RF-BO-007.1: Relatórios de consumo de combustível ✓
+  • RF-BO-007.2: Análise de custos operacionais ✓
+  • RF-BO-007.3: Relatórios de manutenções ✓
+  • RF-BO-007.4: Estatísticas de utilização ✓
+  • RF-BO-007.5: Exportação (PDF/Excel) ✓
+  • RF-BO-007.6: Relatórios personalizados por período ✓
+
+
+RF-BO-008: Gestão de Documentos
+────────────────────────────────────────────────────────────────────────────
+Descrição: Arquivo digital de documentação
+Prioridade: Média
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-008.1: Upload de documentos ✓
+  • RF-BO-008.2: Categorização (seguro, licença, inspeção, etc.) ✓
+  • RF-BO-008.3: Controlo de validade/expiração ✓
+  • RF-BO-008.4: Alertas de vencimento ✓
+  • RF-BO-008.5: Pesquisa avançada ✓
+  • RF-BO-008.6: Controlo de acesso por permissões ✓
+
+
+RF-BO-009: Auditoria e Logs
+────────────────────────────────────────────────────────────────────────────
+Descrição: Registo completo de atividades do sistema
+Prioridade: Média
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-009.1: Log de ações críticas (criar, editar, eliminar) ✓
+  • RF-BO-009.2: Rastreabilidade de alterações ✓
+  • RF-BO-009.3: Relatórios de auditoria ✓
+  • RF-BO-009.4: Filtros avançados (utilizador, período, ação) ✓
+  • RF-BO-009.5: Retenção configurável de logs ✓
+  • RF-BO-009.6: Registo de IP e timestamp ✓
+
+
+RF-BO-010: Gestão de Condutores
+────────────────────────────────────────────────────────────────────────────
+Descrição: Gestão de perfis de condutores
+Prioridade: Alta
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-010.1: Criação de perfil de condutor ✓
+  • RF-BO-010.2: Edição de dados (carta, validade) ✓
+  • RF-BO-010.3: Associação a veículos ✓
+  • RF-BO-010.4: Histórico de atividades ✓
+  • RF-BO-010.5: Alertas de documentos vencidos ✓
+
+
+RF-BO-011: Gestão de Rotas
+────────────────────────────────────────────────────────────────────────────
+Descrição: Planeamento e gestão de rotas
+Prioridade: Média
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-011.1: Criação de rotas ✓
+  • RF-BO-011.2: Atribuição de veículo e condutor ✓
+  • RF-BO-011.3: Definição de origem e destino ✓
+  • RF-BO-011.4: Registo de horários ✓
+  • RF-BO-011.5: Histórico de rotas ✓
+
+
+RF-BO-012: Gestão de Tickets de Suporte
+────────────────────────────────────────────────────────────────────────────
+Descrição: Administração de tickets de suporte
+Prioridade: Média
+Complexidade: Média
+Estado: Implementado
+
+Especificações:
+  • RF-BO-012.1: Visualização de todos os tickets ✓
+  • RF-BO-012.2: Resposta a tickets ✓
+  • RF-BO-012.3: Alteração de estado ✓
+  • RF-BO-012.4: Alteração de prioridade ✓
+  • RF-BO-012.5: Estatísticas de suporte ✓
+
+
+================================================================================
+3. REQUISITOS NÃO FUNCIONAIS
+================================================================================
+
+RNF-001: Desempenho
+────────────────────────────────────────────────────────────────────────────
+  • Tempo de carregamento de páginas: < 3 segundos
+  • Tempo de resposta de operações: < 2 segundos
+  • Suporte para até 1000 utilizadores simultâneos
+  • Otimização de consultas à base de dados
+  • Cache de dados frequentemente acedidos
+
+
+RNF-002: Segurança
+────────────────────────────────────────────────────────────────────────────
+  • Autenticação robusta com hashing de passwords (bcrypt)
+  • Controlo de acesso baseado em roles (RBAC)
+  • Proteção contra SQL Injection
+  • Proteção contra XSS (Cross-Site Scripting)
+  • Proteção contra CSRF (Cross-Site Request Forgery)
+  • Sessões seguras com tokens
+  • HTTPS obrigatório em produção
+  • Logs de auditoria de ações críticas
+  • Backup automático de dados
+
+
+RNF-003: Usabilidade
+────────────────────────────────────────────────────────────────────────────
+  • Interface intuitiva e amigável
+  • Design responsivo (mobile, tablet, desktop)
+  • Mensagens de erro claras e informativas
+  • Feedback visual de ações
+  • Navegação consistente
+  • Acessibilidade (WCAG 2.1 nível AA)
+  • Suporte a múltiplos idiomas (PT, EN preparado)
+
+
+RNF-004: Manutenibilidade
+────────────────────────────────────────────────────────────────────────────
+  • Código modular e bem estruturado
+  • Documentação técnica completa
+  • Padrão MVC (Model-View-Controller)
+  • Versionamento de código (Git)
+  • Testes automatizados (unitários e funcionais)
+  • Logs detalhados para debugging
+  • Separação de ambientes (desenvolvimento, produção)
+
+
+RNF-005: Escalabilidade
+────────────────────────────────────────────────────────────────────────────
+  • Arquitetura modular
+  • Suporte a múltiplas empresas (multi-tenant)
+  • Base de dados otimizada com índices
+  • Possibilidade de distribuição de carga
+  • Armazenamento externo de ficheiros preparado
+  • Cache distribuída preparada
+
+
+RNF-006: Disponibilidade
+────────────────────────────────────────────────────────────────────────────
+  • Disponibilidade: 99.5%
+  • Backup diário automático
+  • Recuperação de desastres
+  • Monitorização de sistema
+  • Logs de erros e alertas
+
+
+RNF-007: Compatibilidade
+────────────────────────────────────────────────────────────────────────────
+  • Navegadores: Chrome, Firefox, Safari, Edge (últimas 2 versões)
+  • Sistemas operativos: Windows, Linux, macOS
+  • Dispositivos: Desktop, Tablet, Smartphone
+  • Base de dados: MySQL 5.7+
+  • PHP: 7.4+
+
+
+RNF-008: Conformidade
+────────────────────────────────────────────────────────────────────────────
+  • Conformidade com RGPD (proteção de dados)
+  • Política de privacidade clara
+  • Termos e condições de uso
+  • Consentimento informado
+  • Direito ao esquecimento
+  • Portabilidade de dados
+
+
+RNF-009: Portabilidade
+────────────────────────────────────────────────────────────────────────────
+  • Framework Yii2 (portável)
+  • Docker preparado para deployment
+  • Configurações externalizadas
+  • Independência de plataforma
+  • Exportação de dados em formatos standard (PDF, Excel, CSV)
+
+
+RNF-010: Fiabilidade
+────────────────────────────────────────────────────────────────────────────
+  • Validação de dados em todos os formulários
+  • Tratamento de erros robusto
+  • Transações de base de dados (ACID)
+  • Rollback automático em caso de falha
+  • Testes de integração e funcionais
+  • Tolerância a falhas
+
+
+================================================================================
+4. CONTROLO DE ACESSO (RBAC) - ROLE-BASED ACCESS CONTROL
+================================================================================
+
+4.1 ROLES DO SISTEMA
+────────────────────────────────────────────────────────────────────────────
+
+ADMIN (Administrator)
+  Descrição: Administrador do sistema com acesso total
+  Tipo: Role
+  Privilégios: Acesso completo a todas as funcionalidades exceto 
+               configurações críticas do sistema
+  Utilizadores típicos: Administradores do VeiGest
+
+
+MANAGER (Fleet Manager)
+  Descrição: Gestor de frota com acesso à gestão operacional
+  Tipo: Role
+  Privilégios: Gestão completa de veículos, condutores, manutenções,
+               documentos, combustível, rotas e relatórios
+  Utilizadores típicos: Gestores de frota, supervisores
+
+
+DRIVER (Conductor)
+  Descrição: Condutor com acesso básico de consulta e registo
+  Tipo: Role
+  Privilégios: Consulta de veículos atribuídos, registo de combustível,
+               consulta de documentos e alertas
+  Utilizadores típicos: Condutores de veículos
+
+
+────────────────────────────────────────────────────────────────────────────
+4.2 PERMISSÕES POR MÓDULO
+────────────────────────────────────────────────────────────────────────────
+
+MÓDULO: EMPRESAS (Companies)
+  • companies.view         - Visualizar empresas
+  • companies.manage       - Gerir empresas (criar, editar, eliminar)
+
+
+MÓDULO: UTILIZADORES (Users)
+  • users.view            - Visualizar utilizadores
+  • users.create          - Criar utilizadores
+  • users.update          - Editar utilizadores
+  • users.delete          - Eliminar utilizadores
+  • users.manage-roles    - Gerir roles de utilizadores
+
+
+MÓDULO: VEÍCULOS (Vehicles)
+  • vehicles.view         - Visualizar veículos
+  • vehicles.create       - Criar veículos
+  • vehicles.update       - Editar veículos
+  • vehicles.delete       - Eliminar veículos
+  • vehicles.assign       - Atribuir veículos a condutores
+
+
+MÓDULO: CONDUTORES (Drivers)
+  • drivers.view          - Visualizar perfis de condutores
+  • drivers.create        - Criar perfis de condutores
+  • drivers.update        - Editar perfis de condutores
+  • drivers.delete        - Eliminar perfis de condutores
+
+
+MÓDULO: FICHEIROS (Files)
+  • files.view            - Visualizar ficheiros
+  • files.upload          - Fazer upload de ficheiros
+  • files.delete          - Eliminar ficheiros
+
+
+MÓDULO: MANUTENÇÕES (Maintenances)
+  • maintenances.view     - Visualizar manutenções
+  • maintenances.create   - Criar manutenções
+  • maintenances.update   - Editar manutenções
+  • maintenances.delete   - Eliminar manutenções
+  • maintenances.schedule - Agendar manutenções
+
+
+MÓDULO: DOCUMENTOS (Documents)
+  • documents.view        - Visualizar documentos
+  • documents.create      - Criar documentos
+  • documents.update      - Editar documentos
+  • documents.delete      - Eliminar documentos
+
+
+MÓDULO: COMBUSTÍVEL (Fuel)
+  • fuel.view             - Visualizar registos de combustível
+  • fuel.create           - Registar abastecimentos
+  • fuel.update           - Editar registos de combustível
+  • fuel.delete           - Eliminar registos de combustível
+
+
+MÓDULO: ALERTAS (Alerts)
+  • alerts.view           - Visualizar alertas
+  • alerts.create         - Criar alertas
+  • alerts.resolve        - Resolver alertas
+
+
+MÓDULO: RELATÓRIOS (Reports)
+  • reports.view          - Visualizar relatórios
+  • reports.create        - Gerar relatórios
+  • reports.export        - Exportar relatórios
+  • reports.advanced      - Relatórios avançados
+
+
+MÓDULO: SISTEMA (System)
+  • system.config         - Configurações do sistema
+  • system.logs           - Visualizar logs do sistema
+
+
+MÓDULO: DASHBOARD
+  • dashboard.view        - Visualizar dashboard
+  • dashboard.advanced    - Dashboard avançado
+
+
+MÓDULO: ROTAS (Routes)
+  • routes.view           - Visualizar rotas
+  • routes.create         - Criar rotas
+  • routes.update         - Editar rotas
+  • routes.delete         - Eliminar rotas
+
+
+MÓDULO: TICKETS DE SUPORTE (Support Tickets)
+  • tickets.view          - Visualizar tickets de suporte
+  • tickets.create        - Criar tickets de suporte
+  • tickets.update        - Atualizar tickets de suporte
+  • tickets.delete        - Eliminar tickets de suporte
+  • tickets.respond       - Responder a tickets de suporte
+
+
+────────────────────────────────────────────────────────────────────────────
+4.3 MATRIZ DE PERMISSÕES POR ROLE
+────────────────────────────────────────────────────────────────────────────
+
+LEGENDA: ✓ = Tem permissão  |  ✗ = Não tem permissão
+
+┌─────────────────────────────┬──────────┬──────────┬──────────┐
+│ PERMISSÃO                   │  ADMIN   │ MANAGER  │  DRIVER  │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ EMPRESAS                    │          │          │          │
+│  companies.view             │    ✓     │    ✓     │    ✗     │
+│  companies.manage           │    ✓     │    ✗     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ UTILIZADORES                │          │          │          │
+│  users.view                 │    ✓     │    ✓     │    ✗     │
+│  users.create               │    ✓     │    ✓     │    ✗     │
+│  users.update               │    ✓     │    ✓     │    ✗     │
+│  users.delete               │    ✓     │    ✗     │    ✗     │
+│  users.manage-roles         │    ✓     │    ✗     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ VEÍCULOS                    │          │          │          │
+│  vehicles.view              │    ✓     │    ✓     │    ✓     │
+│  vehicles.create            │    ✓     │    ✓     │    ✗     │
+│  vehicles.update            │    ✓     │    ✓     │    ✗     │
+│  vehicles.delete            │    ✓     │    ✗     │    ✗     │
+│  vehicles.assign            │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ CONDUTORES                  │          │          │          │
+│  drivers.view               │    ✓     │    ✓     │    ✗     │
+│  drivers.create             │    ✓     │    ✓     │    ✗     │
+│  drivers.update             │    ✓     │    ✓     │    ✗     │
+│  drivers.delete             │    ✓     │    ✗     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ FICHEIROS                   │          │          │          │
+│  files.view                 │    ✓     │    ✓     │    ✓     │
+│  files.upload               │    ✓     │    ✓     │    ✗     │
+│  files.delete               │    ✓     │    ✗     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ MANUTENÇÕES                 │          │          │          │
+│  maintenances.view          │    ✓     │    ✓     │    ✗     │
+│  maintenances.create        │    ✓     │    ✓     │    ✗     │
+│  maintenances.update        │    ✓     │    ✓     │    ✗     │
+│  maintenances.delete        │    ✓     │    ✓     │    ✗     │
+│  maintenances.schedule      │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ DOCUMENTOS                  │          │          │          │
+│  documents.view             │    ✓     │    ✓     │    ✓     │
+│  documents.create           │    ✓     │    ✓     │    ✗     │
+│  documents.update           │    ✓     │    ✓     │    ✗     │
+│  documents.delete           │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ COMBUSTÍVEL                 │          │          │          │
+│  fuel.view                  │    ✓     │    ✓     │    ✓     │
+│  fuel.create                │    ✓     │    ✓     │    ✓     │
+│  fuel.update                │    ✓     │    ✓     │    ✗     │
+│  fuel.delete                │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ ALERTAS                     │          │          │          │
+│  alerts.view                │    ✓     │    ✓     │    ✓     │
+│  alerts.create              │    ✓     │    ✓     │    ✗     │
+│  alerts.resolve             │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ RELATÓRIOS                  │          │          │          │
+│  reports.view               │    ✓     │    ✓     │    ✗     │
+│  reports.create             │    ✓     │    ✓     │    ✗     │
+│  reports.export             │    ✓     │    ✓     │    ✗     │
+│  reports.advanced           │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ SISTEMA                     │          │          │          │
+│  system.config              │    ✗     │    ✗     │    ✗     │
+│  system.logs                │    ✓     │    ✗     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ DASHBOARD                   │          │          │          │
+│  dashboard.view             │    ✓     │    ✓     │    ✓     │
+│  dashboard.advanced         │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ ROTAS                       │          │          │          │
+│  routes.view                │    ✓     │    ✓     │    ✓     │
+│  routes.create              │    ✓     │    ✓     │    ✗     │
+│  routes.update              │    ✓     │    ✓     │    ✗     │
+│  routes.delete              │    ✓     │    ✓     │    ✗     │
+├─────────────────────────────┼──────────┼──────────┼──────────┤
+│ TICKETS SUPORTE             │          │          │          │
+│  tickets.view               │    ✓     │    ✓     │    ✓     │
+│  tickets.create             │    ✓     │    ✓     │    ✓     │
+│  tickets.update             │    ✓     │    ✓     │    ✗     │
+│  tickets.delete             │    ✓     │    ✓     │    ✗     │
+│  tickets.respond            │    ✓     │    ✓     │    ✗     │
+└─────────────────────────────┴──────────┴──────────┴──────────┘
+
+
+────────────────────────────────────────────────────────────────────────────
+NOTAS IMPORTANTES SOBRE RBAC:
+────────────────────────────────────────────────────────────────────────────
+
+1. HIERARQUIA DE ROLES
+   Admin > Manager > Driver
+   
+2. HERANÇA DE PERMISSÕES
+   Os roles superiores podem herdar permissões dos inferiores,
+   mas não é o caso nesta implementação (cada role tem permissões explícitas)
+
+3. ISOLAMENTO POR EMPRESA
+   Todos os utilizadores estão associados a uma empresa (company_id)
+   e só podem aceder aos dados da sua própria empresa
+
+4. PERMISSÃO ESPECIAL: system.config
+   Esta permissão não é atribuída a nenhum role por questões de segurança
+   e está reservada para futuras funcionalidades de super-admin
+
+5. VALIDAÇÃO DE ACESSO
+   O sistema valida as permissões em dois níveis:
+   - Nível de Controller (através de behaviors)
+   - Nível de View (exibição condicional de elementos)
+
+6. AUDITORIA
+   Todas as ações dos utilizadores com permissões críticas
+   são registadas na tabela activity_logs
+
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================
+
+Documento gerado automaticamente em 06/01/2026
+Sistema: VeiGest - Gestão de Frotas Empresariais
+Versão: 1.0
+Framework: Yii2 Advanced Application Template
+Base de Dados: MySQL 5.7+
+PHP: 7.4+
+
+Para mais informações, consulte a documentação técnica completa em:
+/docs/ e /relatorios/
+
+================================================================================

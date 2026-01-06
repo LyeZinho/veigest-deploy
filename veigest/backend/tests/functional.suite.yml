@@ -1,0 +1,14 @@
+# Codeception Test Suite Configuration
+#
+# Suite for functional tests
+# RF-TT-002: Testes funcionais para back-office
+
+suite_namespace: backend\tests\functional
+actor: FunctionalTester
+bootstrap: false
+modules:
+    enabled:
+        - Yii2:
+            configFile: 'config/codeception-local.php'
+            cleanup: false
+        - Asserts

@@ -1,0 +1,17 @@
+# global codeception file to run tests from all apps
+include:
+    - common
+    - frontend
+    - backend
+paths:
+    output: console/runtime/output
+settings:
+    colors: true
+    
+# Extensions for API testing
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+
+# Bootstrap for API tests
+bootstrap: _bootstrap.php

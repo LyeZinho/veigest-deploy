@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste CSRF - VeiGest</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Teste de Login VeiGest</h1>
+    <p>Use este formulário simples para testar:</p>
+    <form action="/site/login" method="POST">
+        <p>
+            <label>Nome de utilizador:</label><br>
+            <input type="text" name="LoginForm[nome]" value="admin" required>
+        </p>
+        <p>
+            <label>Senha:</label><br>
+            <input type="password" name="LoginForm[password]" value="admin" required>
+        </p>
+        <p>
+            <input type="hidden" name="_csrf-frontend" value="test-token-1763564331">
+            <input type="submit" value="Login">
+        </p>
+    </form>
+    <p><a href="/site/login">← Voltar ao login normal</a></p>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Contact: admin@veigest.dev
+Expires: 2026-12-31T23:59:00.000Z
+Preferred-Languages: pt, en
+Canonical: http://veigest.dev/.well-known/security.txt
+
+# Este site funciona apenas em HTTP
+# NAO ha certificado SSL valido configurado
+# Use sempre http:// nas URLs

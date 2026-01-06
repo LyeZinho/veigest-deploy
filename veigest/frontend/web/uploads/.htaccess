@@ -1,0 +1,24 @@
+# Segurança para diretório de uploads
+# Desabilitar execução de scripts PHP neste diretório
+
+# Desabilitar execução de PHP
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Alternativa para Apache 2.4+
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.php$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Prevenir listagem de diretório
+Options -Indexes
+
+# Permitir apenas tipos de ficheiros específicos
+<FilesMatch "\.(pdf|doc|docx|xls|xlsx|jpg|jpeg|png|gif)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>

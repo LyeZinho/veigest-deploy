@@ -1,0 +1,36 @@
+# Yii2 Backend .htaccess
+RewriteEngine on
+
+# Se a URL nao for um arquivo ou diretorio existente, redirecionar para index.php  
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+
+# Prevenir acesso direto a arquivos sensíveis
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+    Require all denied
+</Files>
+
+# Seguranca adicional para o backend
+<Files "*.php">
+    Require ip 127.0.0.1
+    Require ip ::1
+    # Adicione outros IPs confiaveis aqui se necessario
+</Files>
+
+<Files "index.php">
+    Require all granted
+</Files>
+
+# Cache de assets estaticos
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month" 
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

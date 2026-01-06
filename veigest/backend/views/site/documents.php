@@ -1,0 +1,417 @@
+<?php
+
+/** @var yii\web\View $this */
+
+$this->title = 'Documentos';
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos - VeiGest</title>
+    
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #09BC8A;
+            --dark-color: #3C3C3C;
+            --light-turquoise: #75DDDD;
+            --lavender-gray: #C8BFC7;
+            --lavender-blush: #FFEAEE;
+        }
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .navbar-light .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .main-sidebar .nav-link.active {
+            background-color: var(--primary-color) !important;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: #666 !important;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(9, 188, 138, 0.1) !important;
+            color: var(--primary-color) !important;
+        }
+        
+        .brand-link {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+        }
+        
+        .btn-primary:hover {
+            background-color: #088570 !important;
+        }
+        
+        .badge-success {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .card {
+            border-top: 3px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .rbac-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .rbac-admin { background-color: #dc3545; color: white; }
+        .rbac-gestor { background-color: #ffc107; color: #333; }
+        .rbac-condutor { background-color: #17a2b8; color: white; }
+        .rbac-convidado { background-color: #6c757d; color: white; }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-dark" style="background-color: var(--dark-color);">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="dashboard.html" class="nav-link">Home</a>
+            </li>
+        </ul>
+        
+        <!-- Right navbar -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge badge-danger navbar-badge">3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-header">3 Notificações</span>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-warning text-warning mr-2"></i> Manutenção programada
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-exclamation-triangle text-danger mr-2"></i> Alerta crítico
+                    </a>
+                </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="profile.html" class="dropdown-item"><i class="fas fa-user mr-2"></i> Perfil</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="login.html" class="dropdown-item"><i class="fas fa-sign-out-alt mr-2"></i> Sair</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Main Sidebar -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #f8f9fa;">
+        <a href="dashboard.html" class="brand-link d-flex align-items-center">
+            <img src="/images/veigest-logo.png" 
+                 alt="VeiGest" style="width: 35px; height: 35px; margin-right: 10px;">
+            <span style="color: white; font-weight: 700;">VeiGest</span>
+        </a>
+        
+        <div class="sidebar">
+            <!-- User Panel -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="https://via.placeholder.com/160x160?text=Admin" class="img-circle elevation-2" alt="Admin">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block" style="color: var(--dark-color); font-weight: 600;">Admin</a>
+                    <span class="rbac-badge rbac-admin">Admin</span>
+                </div>
+            </div>
+            
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-car"></i>
+                            <p>Frota <i class="right fas fa-angle-left"></i></p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="vehicles.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Veículos</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="drivers.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Condutores</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="maintenance.html" class="nav-link">
+                            <i class="nav-icon fas fa-tools"></i>
+                            <p>Manutenção</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="documents.html" class="nav-link active">
+                            <i class="nav-icon fas fa-file-alt"></i>
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <i class="nav-icon fas fa-bell"></i>
+                            <p>Alertas</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="reports.html" class="nav-link">
+                            <i class="nav-icon fas fa-chart-bar"></i>
+                            <p>Relatórios</p>
+                        </a>
+                    </li>
+                    
+                    <!-- Admin Section -->
+                    <li class="nav-header" style="color: #999;">ADMINISTRAÇÃO</li>
+                    
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>Gestão de Utilizadores</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="system-settings.html" class="nav-link">
+                            <i class="nav-icon fas fa-cogs"></i>
+                            <p>Configurações do Sistema</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="logs.html" class="nav-link">
+                            <i class="nav-icon fas fa-history"></i>
+                            <p>Registos de Auditoria</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    
+    <!-- Content -->
+    <div class="content-wrapper">
+        <!-- Content Header -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0" style="color: var(--dark-color); font-weight: 700;">Gestão Documental</h1>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-upload mr-2"></i>Upload Documento
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Summary Stats -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="small-box" style="background-color: var(--primary-color); color: white;">
+                            <div class="inner">
+                                <h3>523</h3>
+                                <p>Total de Documentos</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-file"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>487</h3>
+                                <p>Válidos</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="small-box bg-warning">
+                            <div class="inner">
+                                <h3>28</h3>
+                                <p>Próximos do Vencimento</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="small-box bg-danger">
+                            <div class="inner">
+                                <h3>8</h3>
+                                <p>Expirados</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" placeholder="Procurar documentos...">
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-control">
+                                    <option>Todos os Tipos</option>
+                                    <option>Seguro</option>
+                                    <option>Inspeção</option>
+                                    <option>DUA</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-control">
+                                    <option>Todos os Estados</option>
+                                    <option>Válido</option>
+                                    <option>Próximo Vencimento</option>
+                                    <option>Expirado</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-secondary btn-block"><i class="fas fa-filter mr-2"></i>Filtrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Documentos do Sistema</h3>
+                        <div class="card-tools">
+                            <span class="badge badge-primary">523 Documentos</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Tipo</th>
+                                    <th>Veículo/Pessoa</th>
+                                    <th>Válido até</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Seguro ABC-1234</td>
+                                    <td>Seguro Automóvel</td>
+                                    <td>ABC-1234</td>
+                                    <td>15/10/2026</td>
+                                    <td><span class="badge badge-success">Válido</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" title="Descarregar"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Inspeção DEF-5678</td>
+                                    <td>Inspeção Técnica</td>
+                                    <td>DEF-5678</td>
+                                    <td>20/11/2025</td>
+                                    <td><span class="badge badge-warning">Próximo Vencimento</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" title="Descarregar"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DUA GHI-9012</td>
+                                    <td>Declaração de Uso</td>
+                                    <td>GHI-9012</td>
+                                    <td>05/09/2025</td>
+                                    <td><span class="badge badge-danger">Expirado</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" title="Descarregar"><i class="fas fa-download"></i></button>
+                                        <button class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <strong>VeiGest &copy; 2025</strong>
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1.0.0
+        </div>
+    </footer>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
+</body>
+</html>
