@@ -62,13 +62,12 @@ $this->params['breadcrumbs'][] = $model->license_plate;
                         <?= Html::a('<i class="fas fa-history"></i> Histórico Completo', ['history', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
                         <?= Html::a('<i class="fas fa-file-alt"></i> Documentos', ['documents', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
                         <?php if (Yii::$app->user->can('vehicles.delete')): ?>
-                            <?= Html::a('<i class="fas fa-trash"></i> Apagar', ['delete', 'id' => $model->id], [
-                                'class' => 'btn btn-danger',
-                                'data' => [
-                                    'confirm' => 'Tem certeza que deseja apagar este veículo? Esta ação não pode ser desfeita.',
-                                    'method' => 'post',
-                                ],
-                            ]) ?>
+                            <form method="POST" action="<?= \yii\helpers\Url::to(['vehicle/delete', 'id' => $model->id]) ?>" style="display: inline;" onsubmit="return confirm('Tem certeza que deseja apagar este veículo? Esta ação não pode ser desfeita.');">
+                                <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->csrfToken) ?>
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Apagar
+                                </button>
+                            </form>
                         <?php endif; ?>
                     </div>
                 </div>

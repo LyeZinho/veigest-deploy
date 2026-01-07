@@ -2,7 +2,7 @@
 # Modifying Yii2's files for initialize Vagrant VM
 #
 # @author HA3IK <golubha3ik@gmail.com>
-# @version 1.0.0
+# ..0
 
 BEGIN {
     print "AWK BEGINs its work:"

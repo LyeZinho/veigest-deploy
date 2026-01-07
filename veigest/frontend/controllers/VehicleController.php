@@ -318,16 +318,63 @@ class VehicleController extends Controller
      */
     public function actionDelete($id)
     {
+        // Log para debug
+        Yii::info('DELETE request received for vehicle ID: ' . $id, __METHOD__);
+        Yii::info('Request method: ' . Yii::$app->request->method, __METHOD__);
+        Yii::info('Is POST: ' . (Yii::$app->request->isPost ? 'yes' : 'no'), __METHOD__);
+        
+        // Verificar se é POST (já validado pelo VerbFilter, mas vamos garantir)
+        if (!Yii::$app->request->isPost) {
+            Yii::$app->session->setFlash('error', 'Método não permitido. Use POST para deletar.');
+            return $this->redirect(['view', 'id' => $id]);
+        }
+        
         $model = $this->findModel($id);
         
-        // Verificar se tem manutenções ou documentos
-        if ($model->getMaintenances()->count() > 0 || $model->getDocuments()->count() > 0) {
-            Yii::$app->session->setFlash('error', 'Não é possível eliminar veículo com manutenções ou documentos associados.');
-            return $this->redirect(['view', 'id' => $model->id]);
+        // Contar relacionamentos
+        $maintenanceCount = $model->getMaintenances()->count();
+        $documentCount = $model->getDocuments()->count();
+        $fuelLogCount = $model->getFuelLogs()->count();
+        
+        Yii::info("Vehicle ID $id - Maintenances: $maintenanceCount, Documents: $documentCount, FuelLogs: $fuelLogCount", __METHOD__);
+        
+        // Usar transação para garantir integridade dos dados
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            // Deletar fuel logs relacionados
+            if ($fuelLogCount > 0) {
+                $deleted = FuelLog::deleteAll(['vehicle_id' => $model->id]);
+                Yii::info("Deleted $deleted fuel logs", __METHOD__);
+            }
+            
+            // Deletar documentos relacionados
+            if ($documentCount > 0) {
+                $deleted = Document::deleteAll(['vehicle_id' => $model->id]);
+                Yii::info("Deleted $deleted documents", __METHOD__);
+            }
+            
+            // Deletar manutenções relacionadas
+            if ($maintenanceCount > 0) {
+                $deleted = Maintenance::deleteAll(['vehicle_id' => $model->id]);
+                Yii::info("Deleted $deleted maintenances", __METHOD__);
+            }
+            
+            // Deletar o veículo
+            if ($model->delete()) {
+                $transaction->commit();
+                Yii::$app->session->setFlash('success', 'Veículo e seus registos relacionados foram removidos com sucesso.');
+                Yii::info("Vehicle ID $id deleted successfully", __METHOD__);
+            } else {
+                $transaction->rollBack();
+                Yii::$app->session->setFlash('error', 'Erro ao remover veículo.');
+                Yii::error("Failed to delete vehicle ID $id: " . json_encode($model->errors), __METHOD__);
+            }
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            Yii::error("Exception deleting vehicle ID $id: " . $e->getMessage(), __METHOD__);
+            Yii::$app->session->setFlash('error', 'Erro ao remover veículo: ' . $e->getMessage());
         }
-
-        $model->delete();
-        Yii::$app->session->setFlash('success', 'Veículo removido com sucesso.');
+        
         return $this->redirect(['index']);
     }
 

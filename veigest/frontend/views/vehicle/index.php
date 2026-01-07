@@ -151,15 +151,16 @@ $this->params['breadcrumbs'][] = $this->title;
                                         if (!Yii::$app->user->can('vehicles.delete')) {
                                             return '';
                                         }
-                                        return Html::a('<i class="fas fa-trash"></i>', $url, [
-                                            'class' => 'btn btn-danger btn-sm',
-                                            'title' => 'Apagar',
-                                            'data-toggle' => 'tooltip',
-                                            'data' => [
-                                                'confirm' => 'Tem certeza que deseja apagar este veículo?',
-                                                'method' => 'post',
-                                            ],
-                                        ]);
+                                        $deleteUrl = \yii\helpers\Url::to(['vehicle/delete', 'id' => $model->id]);
+                                        $csrf = \Yii::$app->request->csrfToken;
+                                        $csrfParam = \Yii::$app->request->csrfParam;
+                                        
+                                        return '<form method="POST" action="' . $deleteUrl . '" style="display: inline;" onsubmit="return confirm(\'Tem certeza que deseja apagar este veículo?\');">' .
+                                               Html::hiddenInput($csrfParam, $csrf) .
+                                               '<button type="submit" class="btn btn-danger btn-sm" title="Apagar" data-toggle="tooltip">' .
+                                               '<i class="fas fa-trash"></i>' .
+                                               '</button>' .
+                                               '</form>';
                                     },
                                 ],
                             ],

@@ -334,8 +334,9 @@ DashboardAsset::register($this);
         </footer>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <?php $this->endBody() ?>
+
+    <!-- AdminLTE and custom scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
 
@@ -409,11 +410,6 @@ DashboardAsset::register($this);
             menu.html(html);
         }
     </script>
-
-    <?php $this->endBody() ?>
-    
-    <!-- Yii Framework JS for POST method handling - MUST be last after all other scripts -->
-    <script src="<?= \yii\helpers\Url::to('@web/assets/9140a366/yii.js') ?>"></script>
 </body>
 
 </html>

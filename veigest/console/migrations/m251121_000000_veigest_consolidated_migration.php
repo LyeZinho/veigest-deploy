@@ -546,7 +546,7 @@ class m251121_000000_veigest_consolidated_migration extends Migration
         $this->batchInsert('{{%auth_item_child}}', ['parent', 'child'], [
             ['manager', 'companies.view'],
             ['manager', 'users.view'], ['manager', 'users.create'], ['manager', 'users.update'],
-            ['manager', 'vehicles.view'], ['manager', 'vehicles.create'], ['manager', 'vehicles.update'], ['manager', 'vehicles.assign'],
+            ['manager', 'vehicles.view'], ['manager', 'vehicles.create'], ['manager', 'vehicles.update'], ['manager', 'vehicles.assign'], ['manager', 'vehicles.delete'],
             ['manager', 'drivers.view'], ['manager', 'drivers.create'], ['manager', 'drivers.update'],
             ['manager', 'files.view'], ['manager', 'files.upload'],
             ['manager', 'maintenances.view'], ['manager', 'maintenances.create'], ['manager', 'maintenances.update'], ['manager', 'maintenances.delete'], ['manager', 'maintenances.schedule'],

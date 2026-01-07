@@ -12,7 +12,7 @@ use yii\web\Response;
  * Fornece versionamento e configurações globais
  * 
  * .
- * @version 1.0
+ * .
  */
 class Module extends BaseModule
 {
