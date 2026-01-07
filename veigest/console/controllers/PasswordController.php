@@ -13,7 +13,7 @@ class PasswordController extends Controller
         
         $user = User::findByUsername($username);
         if (!$user) {
-            echo "❌ Utilizador '$username' não encontrado!\n";
+            echo "Utilizador '$username' não encontrado!\n";
             return 1;
         }
         
@@ -30,7 +30,7 @@ class PasswordController extends Controller
             echo "Pode agora fazer login em: http://localhost/site/login\n";
             return 0;
         } else {
-            echo "❌ Erro ao alterar password:\n";
+            echo "Erro ao alterar password:\n";
             foreach ($user->getErrors() as $field => $errors) {
                 foreach ($errors as $error) {
                     echo "  - $field: $error\n";
@@ -46,7 +46,7 @@ class PasswordController extends Controller
         
         $user = User::findByUsername($username);
         if (!$user) {
-            echo "❌ Utilizador '$username' não encontrado!\n";
+            echo "Utilizador '$username' não encontrado!\n";
             return 1;
         }
         
@@ -60,9 +60,9 @@ class PasswordController extends Controller
         
         // Testar se a password 'admin' funciona
         if ($user->validatePassword('admin')) {
-            echo "✅ Password 'admin' está CORRETA\n";
+            echo "Password 'admin' está CORRETA\n";
         } else {
-            echo "❌ Password 'admin' está INCORRETA\n";
+            echo "Password 'admin' está INCORRETA\n";
         }
         
         return 0;

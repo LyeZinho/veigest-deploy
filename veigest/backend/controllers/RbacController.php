@@ -17,8 +17,6 @@ class RbacController extends Controller
         // Alinhar com migração consolidada: usar roles existentes
         $admin  = $auth->getRole('admin');
         $manager = $auth->getRole('manager');
-        $maint   = $auth->getRole('maintenance-manager');
-        $senior  = $auth->getRole('senior-driver');
         $driver  = $auth->getRole('driver');
 
         // ATRIBUIÇÕES DE ROLES A UTILIZADORES DEMO (SE EXISTIREM)
@@ -37,28 +35,6 @@ class RbacController extends Controller
                 ->one();
             if ($managerUser && !$auth->getAssignment('manager', (string)$managerUser->id)) {
                 $auth->assign($manager, (string)$managerUser->id);
-            }
-        }
-
-        // Maintenance manager
-        if ($maint) {
-            $maintUser = User::find()
-                ->where(['username' => 'maintenance'])
-                ->orWhere(['email' => 'maintenance@veigest.com'])
-                ->one();
-            if ($maintUser && !$auth->getAssignment('maintenance-manager', (string)$maintUser->id)) {
-                $auth->assign($maint, (string)$maintUser->id);
-            }
-        }
-
-        // Senior driver
-        if ($senior) {
-            $seniorUser = User::find()
-                ->where(['username' => 'senior'])
-                ->orWhere(['email' => 'senior@veigest.com'])
-                ->one();
-            if ($seniorUser && !$auth->getAssignment('senior-driver', (string)$seniorUser->id)) {
-                $auth->assign($senior, (string)$seniorUser->id);
             }
         }
 
