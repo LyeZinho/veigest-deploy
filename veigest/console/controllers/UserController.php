@@ -15,15 +15,15 @@ class UserController extends Controller
         // Verificar se já existe
         $existingUser = User::findByUsername($username);
         if ($existingUser) {
-            echo "✅ Utilizador '$username' já existe (ID: {$existingUser->id})\n";
-            echo "📧 Email: {$existingUser->email}\n";
+            echo "Utilizador '$username' já existe (ID: {$existingUser->id})\n";
+            echo "Email: {$existingUser->email}\n";
             return 0;
         }
 
         // Verificar se há empresas
         $companyExists = Yii::$app->db->createCommand("SELECT COUNT(*) FROM companies")->queryScalar();
         if ($companyExists == 0) {
-            echo "⚠️  Nenhuma empresa encontrada. Criando empresa padrão...\n";
+            echo "Nenhuma empresa encontrada. Criando empresa padrão...\n";
             Yii::$app->db->createCommand()
                 ->insert('companies', [
                     'nome' => 'VeiGest Empresa Padrão',
@@ -39,7 +39,7 @@ class UserController extends Controller
                     'updated_at' => date('Y-m-d H:i:s')
                 ])
                 ->execute();
-            echo "✅ Empresa padrão criada\n";
+            echo "Empresa padrão criada\n";
         }
 
         // Criar utilizador
@@ -55,15 +55,15 @@ class UserController extends Controller
         $user->generateAuthKey();
 
         if ($user->save()) {
-            echo "✅ Utilizador criado com sucesso!\n";
-            echo "👤 Username: $username\n";
-            echo "📧 Email: $email\n";
-            echo "🔐 Password: $password\n";
-            echo "🏢 Company ID: 1\n";
-            echo "🆔 User ID: {$user->id}\n";
+            echo "Utilizador criado com sucesso!\n";
+            echo "Username: $username\n";
+            echo "Email: $email\n";
+            echo "Password: $password\n";
+            echo "Company ID: 1\n";
+            echo "User ID: {$user->id}\n";
             echo "\n";
-            echo "🌐 Acesso Frontend: http://localhost/site/login\n";
-            echo "🔧 Acesso Backend: http://localhost:8080/site/login\n";
+            echo "Acesso Frontend: http://localhost/site/login\n";
+            echo "Acesso Backend: http://localhost:8080/site/login\n";
             return 0;
         } else {
             echo "❌ Erro ao criar utilizador:\n";
